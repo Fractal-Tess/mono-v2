@@ -99,12 +99,6 @@
   // ##################################################
   // ###           Language customisations          ###
   // ##################################################
-  // Make sure we're using biomejs for all filetypes
-  // Need this because we need to override the default json and svelte formatters that folks might have configured
-  // "editor.defaultFormatter": "biomejs.biome",
-  "[javascript][javascriptreact][typescript][typescriptreact][json][html]": {
-    "editor.defaultFormatter": "biomejs.biome"
-  },
   "[jsonc]": {
     "editor.defaultFormatter": "vscode.json-language-features"
   },

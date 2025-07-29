@@ -1,7 +1,7 @@
-import type { Action } from 'svelte/action';
+import { getElement, getTextContent, setTextContent } from '#utils/element.js';
 import { on } from 'svelte/events';
 import type { ElementOrSelector } from '#utils/element.js';
-import { getElement, getTextContent, setTextContent } from '#utils/element.js';
+import type { Action } from 'svelte/action';
 
 interface CopyAttributes {
   'on:!copy'?: (event: CustomEvent<string>) => void;

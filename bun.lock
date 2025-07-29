@@ -18,9 +18,6 @@
       "version": "0.0.1",
       "dependencies": {
         "@inlang/paraglide-js": "catalog:i18n",
-        "convex-svelte": "^0.0.11",
-      },
-      "devDependencies": {
         "@playwright/test": "catalog:test",
         "@repo/convex": "workspace:*",
         "@repo/tsconfig": "workspace:*",
@@ -29,6 +26,7 @@
         "@sveltejs/kit": "catalog:ui",
         "@sveltejs/vite-plugin-svelte": "catalog:ui",
         "@tailwindcss/vite": "catalog:ui",
+        "convex-svelte": "^0.0.11",
         "mdsvex": "catalog:ui",
         "svelte": "catalog:ui",
         "svelte-check": "catalog:ui",
@@ -53,7 +51,7 @@
     },
     "packages/ui": {
       "name": "@repo/ui",
-      "devDependencies": {
+      "dependencies": {
         "@internationalized/date": "^3.8.1",
         "@lucide/svelte": "^0.515.0",
         "@repo/tsconfig": "workspace:*",

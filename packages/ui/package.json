@@ -25,7 +25,7 @@
     "ui:add": "bunx shadcn-svelte@latest add",
     "ui:update": "bunx shadcn-svelte@latest update"
   },
-  "devDependencies": {
+  "dependencies": {
     "@internationalized/date": "^3.8.1",
     "@lucide/svelte": "^0.515.0",
     "@repo/tsconfig": "workspace:*",

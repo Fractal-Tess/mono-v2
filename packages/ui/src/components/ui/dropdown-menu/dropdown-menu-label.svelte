@@ -1,24 +1,25 @@
 <script lang="ts">
-	import { cn, type WithElementRef } from "@repo/ui/utils.js";
-	import type { HTMLAttributes } from "svelte/elements";
+  import { cn } from '@repo/ui/utils.js';
+  import type { WithElementRef } from '@repo/ui/utils.js';
+  import type { HTMLAttributes } from 'svelte/elements';
 
-	let {
-		ref = $bindable(null),
-		class: className,
-		inset,
-		children,
-		...restProps
-	}: WithElementRef<HTMLAttributes<HTMLDivElement>> & {
-		inset?: boolean;
-	} = $props();
+  let {
+    ref = $bindable(null),
+    class: className,
+    inset,
+    children,
+    ...restProps
+  }: WithElementRef<HTMLAttributes<HTMLDivElement>> & {
+    inset?: boolean;
+  } = $props();
 </script>
 
 <div
-	bind:this={ref}
-	data-slot="dropdown-menu-label"
-	data-inset={inset}
-	class={cn("px-2 py-1.5 text-sm font-semibold data-[inset]:pl-8", className)}
-	{...restProps}
+  bind:this={ref}
+  data-slot="dropdown-menu-label"
+  data-inset={inset}
+  class={cn('px-2 py-1.5 text-sm font-semibold data-[inset]:pl-8', className)}
+  {...restProps}
 >
-	{@render children?.()}
+  {@render children?.()}
 </div>

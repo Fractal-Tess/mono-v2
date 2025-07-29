@@ -3,9 +3,7 @@
   "ui": "tui",
   "globalEnv": [],
   "globalPassThroughEnv": [],
-  "globalDependencies": [
-    "bun.lock"
-  ],
+  "globalDependencies": ["bun.lock"],
   "tasks": {
     "build": {
       "cache": true
@@ -13,16 +11,11 @@
     "dev": {
       "cache": false,
       "persistent": true,
-      "dependsOn": [
-        "init",
-        "generate-key"
-      ]
+      "dependsOn": ["init", "generate-key"]
     },
     "init": {},
     "generate-key": {
-      "dependsOn": [
-        "init"
-      ]
+      "dependsOn": ["init"]
     }
   }
 }

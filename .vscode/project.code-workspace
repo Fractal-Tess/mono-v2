@@ -3,7 +3,7 @@
     {
       "name": "☀️ mono-v2",
       "path": ".."
-    },
+    }
   ],
   "settings": {
     "files.exclude": {
@@ -15,7 +15,7 @@
       {
         "regex": "mono-v2",
         "prefix": "☀️ "
-      },
+      }
     ]
   },
   "extensions": {

@@ -1,5 +1,5 @@
-import type { Action } from 'svelte/action';
 import { on } from 'svelte/events';
+import type { Action } from 'svelte/action';
 
 type Options = {
   delay?: number;
@@ -7,7 +7,9 @@ type Options = {
 };
 
 type Attributes = {
-  'on:debounced'?: (event: InputEvent & { currentTarget: HTMLInputElement }) => void;
+  'on:debounced'?: (
+    event: InputEvent & { currentTarget: HTMLInputElement }
+  ) => void;
 };
 
 type DebounceAction = Action<HTMLInputElement, Options | undefined, Attributes>;

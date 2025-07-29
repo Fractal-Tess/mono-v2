@@ -14,9 +14,9 @@ const config = {
     adapter: adapter(),
     alias: {
       '@repo/ui': 'src',
-      '@repo/ui/*': 'src/*',
-    },
-  },
+      '@repo/ui/*': 'src/*'
+    }
+  }
 };
 
 export default config;

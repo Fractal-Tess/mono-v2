@@ -11,12 +11,16 @@ type DebouncedInputOptions = {
 export function debounced_input({
   ondebounced,
   delay = 300,
-  eventTypeToDebounce = 'input',
+  eventTypeToDebounce = 'input'
 }: DebouncedInputOptions): Attachment<HTMLInputElement> {
   let timeoutId: ReturnType<typeof setTimeout>;
   function wrapper(ev: Event) {
     timeoutId && clearTimeout(timeoutId);
-    timeoutId = setTimeout(ondebounced, delay, (ev.target as HTMLInputElement).value);
+    timeoutId = setTimeout(
+      ondebounced,
+      delay,
+      (ev.target as HTMLInputElement).value
+    );
   }
 
   return (element: HTMLInputElement) => {

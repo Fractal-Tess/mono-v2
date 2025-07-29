@@ -1,5 +1,5 @@
-import type { Action } from 'svelte/action';
 import { on } from 'svelte/events';
+import type { Action } from 'svelte/action';
 
 type Options = {
   onClickOutside?: (event: MouseEvent | TouchEvent) => void;
@@ -38,7 +38,7 @@ export const clickOutside: ClickOutsideAction = (node, _options = {}) => {
   const detect = (event: MouseEvent | TouchEvent) => {
     if (
       (node && !node.contains(event.target as Node)) ||
-      options.include.some((i) => (event.target as Node).isSameNode(i))
+      options.include.some(i => (event.target as Node).isSameNode(i))
     ) {
       options.onClickOutside(event);
       // node.dispatchEvent(new CustomEvent("clickoutside"));
@@ -47,8 +47,14 @@ export const clickOutside: ClickOutsideAction = (node, _options = {}) => {
 
   $effect(() => {
     // The event listener is using passive to avoid scrolling performance issues, and capture to make sure that all clicks bubble up to the listener.
-    const click = on(document, 'click', detect, { passive: true, capture: true });
-    const touchstart = on(document, 'touchstart', detect, { passive: true, capture: true });
+    const click = on(document, 'click', detect, {
+      passive: true,
+      capture: true
+    });
+    const touchstart = on(document, 'touchstart', detect, {
+      passive: true,
+      capture: true
+    });
 
     return () => {
       click();

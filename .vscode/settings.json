@@ -49,7 +49,7 @@
     "**/.svelte-kit": true,
     "**/.turbo": true,
     "**/.astro": true,
-    "**/node_modules": true,
+    "**/node_modules": true
   },
   "files.associations": {
     ".env*": "properties",
@@ -79,10 +79,7 @@
   },
   // for tailwind-variants
   "tailwindCSS.experimental.classRegex": [
-    [
-      "([\"'`][^\"'`]*.*?[\"'`])",
-      "[\"'`]([^\"'`]*).*?[\"'`]"
-    ]
+    ["([\"'`][^\"'`]*.*?[\"'`])", "[\"'`]([^\"'`]*).*?[\"'`]"]
   ],
   ////////// TypeScript //////////
   // astro requires this

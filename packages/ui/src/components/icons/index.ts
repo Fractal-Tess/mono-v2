@@ -30,5 +30,5 @@ export {
   Spinner as IconSpinner,
   Summary as IconSummary,
   Translate as IconTranslate,
-  Loading as IconLoading,
+  Loading as IconLoading
 };

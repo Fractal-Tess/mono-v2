@@ -10,10 +10,12 @@
     CardTitle
   } from '@repo/ui/components/ui/card/index.js';
   import { Input } from '@repo/ui/components/ui/input/index.js';
-  import { Label } from '@repo/ui/components/ui/label/index.js';
+  // import { Label } from '@repo/ui/components/ui/label/index.js';
   import { Textarea } from '@repo/ui/components/ui/textarea/index.js';
   import type { PageData } from './$types';
   import type { Id } from '@repo/convex/dataModel.js';
+
+  // console.log(Label);
 
   let { data }: { data: PageData } = $props();
   const client = useConvexClient();
@@ -64,7 +66,7 @@
     </CardHeader>
     <CardContent class="space-y-4">
       <div>
-        <Label for="title">Title</Label>
+        <label for="title">Title</label>
         <Input
           id="title"
           bind:value={newNoteTitle}
@@ -73,7 +75,7 @@
         />
       </div>
       <div>
-        <Label for="content">Content</Label>
+        <label for="content">Content</label>
         <Textarea
           id="content"
           bind:value={newNoteContent}
@@ -84,7 +86,7 @@
       </div>
       <div class="flex items-center space-x-2">
         <input type="checkbox" id="summary" bind:checked={isSummary} />
-        <Label for="summary">Generate AI summary</Label>
+        <label for="summary">Generate AI summary</label>
       </div>
       <Button
         onclick={createNote}

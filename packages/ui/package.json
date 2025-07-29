@@ -1,0 +1,62 @@
+{
+  "name": "@repo/ui",
+  "description": "Shared shadcn UI components",
+  "sideEffects": false,
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./src/index.ts",
+      "svelte": "./src/index.ts",
+      "default": "./src/index.ts"
+    },
+    "./utils.js": "./src/utils.ts",
+    "./actions/*": "./src/actions/*",
+    "./attachments/*": "./src/attachments/*",
+    "./components/*": "./src/components/*",
+    "./styles/*": "./src/styles/*",
+    "./transitions/*": "./src/transitions/*",
+    "./hooks/*": "./src/hooks/*"
+  },
+  "scripts": {
+    "sv:check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+    "sv:check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
+    "prepare": "svelte-kit sync || echo ''",
+    "sync": "svelte-kit sync",
+    "ui:add": "bunx shadcn-svelte@latest add",
+    "ui:update": "bunx shadcn-svelte@latest update"
+  },
+  "devDependencies": {
+    "@internationalized/date": "^3.8.1",
+    "@lucide/svelte": "^0.515.0",
+    "@repo/tsconfig": "workspace:*",
+    "@sveltejs/adapter-auto": "catalog:ui",
+    "@sveltejs/kit": "catalog:ui",
+    "@sveltejs/vite-plugin-svelte": "catalog:ui",
+    "@tailwindcss/forms": "catalog:ui",
+    "@tailwindcss/typography": "catalog:ui",
+    "@tailwindcss/vite": "catalog:ui",
+    "@tanstack/table-core": "^8.20.5",
+    "bits-ui": "^2.8.6",
+    "clsx": "^2.1.1",
+    "embla-carousel-svelte": "^8.6.0",
+    "formsnap": "^2.0.1",
+    "layerchart": "2.0.0-next.27",
+    "mode-watcher": "^1.0.8",
+    "paneforge": "^1.0.0",
+    "svelte": "catalog:ui",
+    "svelte-check": "catalog:ui",
+    "svelte-sonner": "^1.0.5",
+    "sveltekit-superforms": "^2.26.1",
+    "tailwind-merge": "^3.3.1",
+    "tailwind-variants": "^1.0.0",
+    "tailwindcss": "catalog:ui",
+    "tw-animate-css": "catalog:ui",
+    "typescript": "catalog:ui",
+    "vaul-svelte": "^1.0.0-next.7",
+    "vite": "catalog:ui"
+  },
+  "peerDependencies": {
+    "@sveltejs/kit": "^2.0.0",
+    "svelte": "^5.0.0"
+  }
+}

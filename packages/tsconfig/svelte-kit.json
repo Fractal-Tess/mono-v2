@@ -1,15 +1,16 @@
 {
-  "$schema": "https://json.schemastore.org/tsconfig",
-  "display": "SvelteKit",
-  "extends": "./base.json",
+	"$schema": "https://json.schemastore.org/tsconfig",
+	"display": "SvelteKit",
+	"extends": "./base.json",
 	"compilerOptions": {
-    "moduleResolution": "bundler",
-    /**
+		"module": "ESNext",
+		"moduleResolution": "bundler",
+		/**
 		 * svelte-preprocess cannot figure out whether you have
 		 * a value or a type, so tell TypeScript to enforce using
 		 * `import type` instead of `import` for Types.
 		 */
-    "verbatimModuleSyntax": true,
+		"verbatimModuleSyntax": true,
 	}
 	// Path aliases are handled by https://svelte.dev/docs/kit/configuration#alias
 	// except $lib which is handled by https://svelte.dev/docs/kit/configuration#files

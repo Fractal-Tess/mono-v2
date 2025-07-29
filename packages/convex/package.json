@@ -1,0 +1,20 @@
+{
+  "name": "@repo/convex",
+  "version": "0.1.0",
+  "scripts": {
+    "dev": "convex dev --env-file .env",
+    "init": "if [ ! -f .env ]; then cp .env.example .env; fi && docker compose up -d",
+    "generate-key": "./scripts/generate-key.sh"
+  },
+  "packageManager": "bun@1.2.17",
+  "exports": {
+    "./convex": "./convex/"
+  },
+  "dependencies": {
+    "convex": "catalog:",
+    "openai": "catalog:"
+  },
+  "devDependencies": {
+    "typescript": "catalog:"
+  }
+}

@@ -1,6 +1,6 @@
 {
   "$schema": "https://turborepo.com/schema.json",
-  "ui": "stream",
+  "ui": "tui",
   "globalEnv": [],
   "globalPassThroughEnv": [],
   "globalDependencies": [
@@ -12,7 +12,17 @@
     },
     "dev": {
       "cache": false,
-      "persistent": true
+      "persistent": true,
+      "dependsOn": [
+        "init",
+        "generate-key"
+      ]
+    },
+    "init": {},
+    "generate-key": {
+      "dependsOn": [
+        "init"
+      ]
     }
   }
 }

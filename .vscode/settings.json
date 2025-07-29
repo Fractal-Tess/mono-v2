@@ -1,0 +1,141 @@
+{
+  "explorer.sortOrder": "type",
+  "explorer.autoRevealExclude": {
+    "**/node_modules": true,
+    ".svelte-kit": true,
+    "$houdini": true,
+    "build": true,
+    "coverage": true
+  },
+  "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.expand": false,
+  "explorer.fileNesting.patterns": {
+    ".gitignore": ".gitattributes,.vercelignore",
+    "README.md": "DEVELOPERS.md,CHANGELOG.md,CODE_OF_CONDUCT.md,CONTRIBUTING.md,LICENSE",
+    "package.json": ".npmrc,bunfig.toml,bun.lock",
+    "flake.nix": "flake.lock,.envrc",
+    "turbo.json": "turbo.jsonc,vercel.json",
+    ".prettierrc.json": ".prettierignore"
+  },
+  "scm.defaultViewMode": "tree",
+  "git.autofetch": true,
+  "editor.wordWrap": "off",
+  "editor.linkedEditing": true,
+  // // To make tailwindcss-intellisense work in .svelte files
+  // "editor.quickSuggestions": {
+  //   "comments": false,
+  //   "strings": "on"
+  // },
+  "search.followSymlinks": false,
+  ////////// Search //////////
+  "search.exclude": {
+    "**/.git": true,
+    "**/node_modules": true,
+    "**/.turbo": true,
+    "**/.svelte-kit": true,
+    "**/coverage": true,
+    "**/build": true,
+    "**/dist": true
+  },
+  ////////// Workbench //////////
+  "workbench.editor.limit.enabled": true,
+  "workbench.editor.limit.value": 8,
+  "workbench.editor.highlightModifiedTabs": true,
+  ////////// File settings //////////
+  "files.autoSave": "onFocusChange",
+  "files.autoSaveDelay": 1000,
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svelte-kit": true,
+    "**/.turbo": true,
+    "**/.astro": true,
+    "**/node_modules": true,
+  },
+  "files.associations": {
+    ".env*": "properties",
+    ".secrets*": "properties",
+    "*.svx": "markdown",
+    "base.json": "jsonc",
+    "svelte-kit.json": "jsonc",
+    "svelte-library.json": "jsonc",
+    "svelte.json": "jsonc",
+    "strict.json": "jsonc",
+    "turbo.json": "jsonc",
+    "*.css": "tailwindcss"
+  },
+  "files.trimTrailingWhitespace": true,
+  ////////// svelte //////////
+  "svelte.enable-ts-plugin": true,
+  "svelte.plugin.svelte.format.enable": false,
+  "svelte.plugin.svelte.defaultScriptLanguage": "ts",
+  "svelte.plugin.svelte.compilerWarnings": {
+    // "css-unused-selector": "ignore",
+    // "a11y-label-has-associated-control": "ignore"
+  },
+  ////////// tailwindCSS //////////
+  "tailwindCSS.emmetCompletions": true,
+  "tailwindCSS.includeLanguages": {
+    "plaintext": "html"
+  },
+  // for tailwind-variants
+  "tailwindCSS.experimental.classRegex": [
+    [
+      "([\"'`][^\"'`]*.*?[\"'`])",
+      "[\"'`]([^\"'`]*).*?[\"'`]"
+    ]
+  ],
+  ////////// TypeScript //////////
+  // astro requires this
+  "typescript.inlayHints.parameterNames.enabled": "all",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.biome": "explicit",
+    "source.organizeImports.biome": "explicit"
+  },
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "emmet.showExpandedAbbreviation": "never",
+  "prettier.enable": false,
+  "typescript.tsdk": "node_modules/typescript/lib",
+  // ##################################################
+  // ###           Language customisations          ###
+  // ##################################################
+  // Make sure we're using biomejs for all filetypes
+  // Need this because we need to override the default json and svelte formatters that folks might have configured
+  // "editor.defaultFormatter": "biomejs.biome",
+  "[javascript][javascriptreact][typescript][typescriptreact][json][html]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[svelte]": {
+    "editor.defaultFormatter": "svelte.svelte-vscode",
+    "editor.codeActionsOnSave": {
+      // FIXME: biome and svelte conflict
+      "quickfix.biome": "never",
+      "source.organizeImports.biome": "never",
+      "source.fixAll.biome": "never"
+    }
+  },
+  "[astro]": {
+    "editor.defaultFormatter": "astro-build.astro-vscode"
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "yzhang.markdown-all-in-one",
+    // Trailing whitespace has special meaning
+    "files.trimTrailingWhitespace": false,
+    "editor.codeActionsOnSave": {
+      "source.fixAll.markdownlint": "explicit"
+    }
+  },
+  "[dockerfile]": {
+    "editor.defaultFormatter": "ms-azuretools.vscode-docker"
+  },
+  "[toml]": {
+    "editor.defaultFormatter": "tamasfe.even-better-toml"
+  },
+  "[yaml]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+  "redhat.telemetry.enabled": false
+}

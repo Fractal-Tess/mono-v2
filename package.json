@@ -1,0 +1,25 @@
+{
+  "name": "mono-v3",
+  "version": "0.1.0",
+  "license": "MIT",
+  "author": "Fractal-Tess",
+  "description": "mono-v3",
+  "preview": true,
+  "scripts": {},
+  "workspaces": {
+    "packages": [
+      "apps/*",
+      "packages/*"
+    ],
+    "catalog": {}
+  },
+  "dependencies": {
+    "turbo": "^2.5.5"
+  },
+  "devDependencies": {
+    "@ianvs/prettier-plugin-sort-imports": "^4.5.1",
+    "prettier": "^3.6.2",
+    "prettier-plugin-svelte": "^3.4.0",
+    "prettier-plugin-tailwindcss": "^0.6.14"
+  }
+}

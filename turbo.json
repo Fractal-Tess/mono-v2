@@ -1,0 +1,18 @@
+{
+  "$schema": "https://turborepo.com/schema.json",
+  "ui": "stream",
+  "globalEnv": [],
+  "globalPassThroughEnv": [],
+  "globalDependencies": [
+    "bun.lock"
+  ],
+  "tasks": {
+    "build": {
+      "cache": true
+    },
+    "dev": {
+      "cache": false,
+      "persistent": true
+    }
+  }
+}

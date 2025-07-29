@@ -94,7 +94,6 @@
   "editor.formatOnPaste": true,
   "editor.formatOnSave": true,
   "emmet.showExpandedAbbreviation": "never",
-  "prettier.enable": false,
   "typescript.tsdk": "node_modules/typescript/lib",
   // ##################################################
   // ###           Language customisations          ###
@@ -103,7 +102,7 @@
     "editor.defaultFormatter": "vscode.json-language-features"
   },
   "[svelte]": {
-    "editor.defaultFormatter": "svelte.svelte-vscode",
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.codeActionsOnSave": {
       // FIXME: biome and svelte conflict
       "quickfix.biome": "never",

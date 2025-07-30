@@ -143,3 +143,6 @@ vite.config.ts.timestamp-*
 
 # Turbo
 .turbo
+
+# Convex generated
+**/convex/_generated

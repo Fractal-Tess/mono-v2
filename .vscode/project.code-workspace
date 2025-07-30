@@ -3,6 +3,22 @@
     {
       "name": "☀️ mono-v2",
       "path": ".."
+    },
+    {
+      "name": "🌐 web",
+      "path": "../apps/web"
+    },
+    {
+      "name": "🎨 ui",
+      "path": "../packages/ui"
+    },
+    {
+      "name": "🔗 convex",
+      "path": "../packages/convex"
+    },
+    {
+      "name": "🔧 tsconfig",
+      "path": "../packages/tsconfig"
     }
   ],
   "settings": {
@@ -15,6 +31,18 @@
       {
         "regex": "mono-v2",
         "prefix": "☀️ "
+      },
+      {
+        "regex": "ui",
+        "prefix": "🎨 "
+      },
+      {
+        "regex": "convex",
+        "prefix": "🔗 "
+      },
+      {
+        "regex": "tsconfig",
+        "prefix": "🔧 "
       }
     ]
   },

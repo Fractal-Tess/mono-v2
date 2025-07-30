@@ -47,6 +47,7 @@
   "files.exclude": {
     "**/.git": true,
     "**/.svelte-kit": true,
+    "**/.direnv": true,
     "**/.turbo": true,
     "**/.astro": true,
     "**/node_modules": true
@@ -78,9 +79,9 @@
     "plaintext": "html"
   },
   // for tailwind-variants
-  "tailwindCSS.experimental.classRegex": [
-    ["([\"'`][^\"'`]*.*?[\"'`])", "[\"'`]([^\"'`]*).*?[\"'`]"]
-  ],
+  // "tailwindCSS.experimental.classRegex": [
+  //   ["([\"'`][^\"'`]*.*?[\"'`])", "[\"'`]([^\"'`]*).*?[\"'`]"]
+  // ],
   ////////// TypeScript //////////
   // astro requires this
   "typescript.inlayHints.parameterNames.enabled": "all",

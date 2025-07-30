@@ -26,18 +26,27 @@
     "ui:update": "bunx shadcn-svelte@latest update"
   },
   "dependencies": {
+    "@dnd-kit-svelte/core": "catalog:ui",
+    "@dnd-kit-svelte/modifiers": "catalog:ui",
+    "@dnd-kit-svelte/sortable": "catalog:ui",
+    "@dnd-kit-svelte/utilities": "catalog:ui",
     "@internationalized/date": "^3.8.1",
     "@lucide/svelte": "^0.515.0",
     "@repo/tsconfig": "workspace:*",
     "@sveltejs/adapter-auto": "catalog:ui",
     "@sveltejs/kit": "catalog:ui",
     "@sveltejs/vite-plugin-svelte": "catalog:ui",
+    "@tabler/icons-svelte": "catalog:ui",
     "@tailwindcss/forms": "catalog:ui",
     "@tailwindcss/typography": "catalog:ui",
     "@tailwindcss/vite": "catalog:ui",
     "@tanstack/table-core": "^8.20.5",
+    "@types/d3-scale": "catalog:ui",
+    "@types/d3-shape": "catalog:ui",
     "bits-ui": "^2.8.6",
     "clsx": "^2.1.1",
+    "d3-scale": "catalog:ui",
+    "d3-shape": "catalog:ui",
     "embla-carousel-svelte": "^8.6.0",
     "formsnap": "^2.0.1",
     "layerchart": "2.0.0-next.27",
@@ -53,7 +62,8 @@
     "tw-animate-css": "catalog:ui",
     "typescript": "catalog:ui",
     "vaul-svelte": "^1.0.0-next.7",
-    "vite": "catalog:ui"
+    "vite": "catalog:ui",
+    "zod": "catalog:generic"
   },
   "peerDependencies": {
     "@sveltejs/kit": "^2.0.0",

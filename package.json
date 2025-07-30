@@ -22,18 +22,27 @@
     },
     "catalogs": {
       "ui": {
+        "@dnd-kit-svelte/core": "0.0.8",
+        "@dnd-kit-svelte/modifiers": "0.0.8",
+        "@dnd-kit-svelte/sortable": "0.0.8",
+        "@dnd-kit-svelte/utilities": "0.0.8",
         "@internationalized/date": "3.8.2",
         "@lucide/svelte": "0.534.0",
         "@sveltejs/adapter-auto": "6.0.1",
         "@sveltejs/adapter-static": "3.0.8",
         "@sveltejs/kit": "2.26.1",
         "@sveltejs/vite-plugin-svelte": "6.1.0",
+        "@tabler/icons-svelte": "3.31.0",
         "@tailwindcss/forms": "0.5.10",
         "@tailwindcss/typography": "0.5.16",
         "@tailwindcss/vite": "4.1.11",
         "@tanstack/table-core": "8.21.3",
+        "@types/d3-scale": "4.0.8",
+        "@types/d3-shape": "3.1.7",
         "bits-ui": "2.8.13",
         "clsx": "2.1.1",
+        "d3-scale": "4.0.2",
+        "d3-shape": "3.2.0",
         "embla-carousel-svelte": "8.6.0",
         "formsnap": "2.0.1",
         "layerchart": "1.0.11",
@@ -51,6 +60,9 @@
         "typescript": "5.8.3",
         "vaul-svelte": "0.3.2",
         "vite": "7.0.6"
+      },
+      "generic": {
+        "zod": "3.25.64"
       },
       "test": {
         "@playwright/test": "1.49.1"

@@ -14,21 +14,28 @@
     "test": "npm run test:e2e"
   },
   "dependencies": {
+    "@inlang/paraglide-js": "catalog:i18n",
+    "@playwright/test": "catalog:test",
+    "@repo/convex": "workspace:*",
     "@repo/tsconfig": "workspace:*",
     "@repo/ui": "workspace:*",
-    "@repo/convex": "workspace:*",
-    "@playwright/test": "catalog:test",
     "@sveltejs/adapter-static": "catalog:ui",
     "@sveltejs/kit": "catalog:ui",
     "@sveltejs/vite-plugin-svelte": "catalog:ui",
     "@tailwindcss/vite": "catalog:ui",
+    "clsx": "^2.1.1",
+    "convex-svelte": "^0.0.11",
+    "lucide-svelte": "^0.534.0",
     "mdsvex": "catalog:ui",
     "svelte": "catalog:ui",
     "svelte-check": "catalog:ui",
+    "tailwind-merge": "^3.3.1",
     "tailwindcss": "catalog:ui",
     "typescript": "catalog:ui",
-    "vite": "catalog:ui",
-    "@inlang/paraglide-js": "catalog:i18n",
-    "convex-svelte": "^0.0.11"
+    "vite": "catalog:ui"
+  },
+  "devDependencies": {
+    "@inlang/paraglide-js": "2.0.0",
+    "@inlang/cli": "^3.0.0"
   }
 }

@@ -5,7 +5,7 @@
     "welcome": "Welcome to your dashboard",
     "documents": "Documents",
     "github": "GitHub",
-    "company_name": "Acme Inc.",
+    "company_name": "Mono-v2",
     "nav": {
       "dashboard": "Dashboard",
       "lifecycle": "Lifecycle",
@@ -141,7 +141,7 @@
     "lightning_fast": "Lightning Fast",
     "optimized_performance": "Optimized performance",
     "welcome_to": "Welcome to {company}",
-    "company_name": "Acme Inc.",
+    "company_name": "Mono-V2",
     "dont_have_account": "Don't have an account?",
     "sign_up": "Sign up",
     "or": "Or",

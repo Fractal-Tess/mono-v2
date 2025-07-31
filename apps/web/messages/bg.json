@@ -2,7 +2,8 @@
   "$schema": "https://inlang.com/schema/inlang-message-format",
   "dashboard": {
     "header": "Табло",
-    "welcome": "Добре дошли в таблото си"
+    "welcome": "Добре дошли в таблото си",
+    "company_name": "Mono-v2"
   },
   "home": {
     "hero": {
@@ -50,7 +51,7 @@
     "footer": {
       "description": "Модерна уеб приложна платформа, изградена за разработчици, които искат да изграждат бързи, сигурни и красиви приложения.",
       "product": "Продукт",
-      "company": "Компания",
+      "company": "Mono-V2",
       "features": "Функции",
       "pricing": "Цени",
       "documentation": "Документация",

@@ -1,7 +1,7 @@
 <script lang="ts">
   import * as Sidebar from '@repo/ui/components/ui/sidebar/index.js';
   import AppSidebar from './_components/AppSidebar.svelte';
-  import SiteHeader from './dashboard/_components/SiteHeader.svelte';
+  import SiteHeader from './_components/SiteHeader.svelte';
 </script>
 
 <Sidebar.Provider

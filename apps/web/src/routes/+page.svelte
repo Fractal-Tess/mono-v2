@@ -1,18 +1,33 @@
 <script lang="ts">
   import * as m from '$lib/paraglide/messages.js';
-  import Hero from './_components/Hero.svelte';
+  import HeroBadge from './_components/HeroBadge.svelte';
+  import HeroCTA from './_components/HeroCTA.svelte';
+  import HeroDescription from './_components/HeroDescription.svelte';
+  import HeroShapes from './_components/HeroShapes.svelte';
+  import HeroTitle from './_components/HeroTitle.svelte';
 </script>
 
 <svelte:head>
-  <title>Mono V2 - Modern Web Application Platform</title>
-  <meta
-    name="description"
-    content="A powerful, modern web application platform built with SvelteKit, featuring real-time collaboration, beautiful UI components, and enterprise-grade security."
-  />
+  <title>{m['home.page.title']()}</title>
+  <meta name="description" content={m['home.page.meta_description']()} />
 </svelte:head>
 
-<Hero
-  badge={m['home.hero.badge']()}
-  title1={m['home.hero.title1']()}
-  title2={m['home.hero.title2']()}
-/>
+<div
+  class="relative min-h-screen w-full flex items-center justify-center overflow-hidden"
+>
+  <HeroShapes />
+
+  <div
+    class="relative z-10 container mx-auto px-4 md:px-6 motion-preset-slide-up motion-delay-300"
+  >
+    <div class="max-w-3xl mx-auto text-center">
+      <HeroBadge badge={m['home.hero.badge']()} />
+      <HeroTitle
+        title1={m['home.hero.title1']()}
+        title2={m['home.hero.title2']()}
+      />
+      <HeroDescription />
+      <HeroCTA />
+    </div>
+  </div>
+</div>

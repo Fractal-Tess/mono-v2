@@ -2,10 +2,8 @@
   import '../app.css';
   import { ModeWatcher, toggleMode } from 'mode-watcher';
   import type { LayoutProps } from './$types';
-  import { ClerkProvider, ConvexProvider } from '$lib/providers';
 
-  let { children, data }: LayoutProps = $props();
-  const { initialState } = data;
+  let { children }: LayoutProps = $props();
 
   // Listen for the "ok" button (Enter) and "," key, execute a lambda
   $effect(() => {
@@ -30,8 +28,4 @@
 
 <ModeWatcher defaultMode="dark" />
 
-<ClerkProvider {initialState}>
-  <ConvexProvider>
-    {@render children()}
-  </ConvexProvider>
-</ClerkProvider>
+{@render children()}

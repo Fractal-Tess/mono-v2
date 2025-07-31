@@ -18,9 +18,9 @@
             echo "
                    _______
                   / / ___/
-             __  / /\__ \ 
-            / /_/ /___/ / 
-            \____//____/  
+             __  / /\__ \
+            / /_/ /___/ /
+            \____//____/
             Bun - $(${pkgs.bun}/bin/bun --version)
             " | ${pkgs.lolcat}/bin/lolcat
           '';
@@ -42,7 +42,7 @@
             # biome
 
             # Additional tools
-            # npkill
+            npkill
             gh
             # flyctl
 

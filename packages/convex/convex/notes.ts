@@ -1,5 +1,4 @@
 import { v } from 'convex/values';
-import { internal } from './_generated/api';
 import { mutation, query } from './_generated/server';
 
 // Get all notes for a specific user
@@ -33,19 +32,17 @@ export const createNote = mutation({
     isSummary: v.boolean()
   },
   handler: async (ctx, { title, content, isSummary }) => {
+    const identity = await ctx.auth.getUserIdentity();
+    console.log('identity', identity);
+    if (!identity) {
+      throw new Error('Unauthorized');
+    }
+
     const noteId = await ctx.db.insert('notes', {
       title,
       content,
-      userId: '1'
+      userId: identity.subject
     });
-
-    if (isSummary) {
-      await ctx.scheduler.runAfter(0, internal.openai.summary, {
-        id: noteId,
-        title,
-        content
-      });
-    }
 
     return noteId;
   }
@@ -56,6 +53,19 @@ export const deleteNote = mutation({
     noteId: v.id('notes')
   },
   handler: async (ctx, args) => {
+    const identity = await ctx.auth.getUserIdentity();
+    if (!identity) {
+      throw new Error('Unauthorized');
+    }
+
+    const note = await ctx.db.get(args.noteId);
+    if (!note) {
+      throw new Error('Note not found');
+    }
+
+    if (note.userId !== identity.subject) {
+      throw new Error('Unauthorized');
+    }
     await ctx.db.delete(args.noteId);
   }
 });

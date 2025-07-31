@@ -69,7 +69,8 @@
       "title1": "Build the Future with",
       "title2": "Modern Technology",
       "description": "Crafting exceptional digital experiences through innovative design and cutting-edge technology.",
-      "sign_in": "Sign In"
+      "sign_in": "Sign In",
+      "dashboard": "Dashboard"
     },
     "features": {
       "title": "Everything you need to build amazing applications",
@@ -118,6 +119,10 @@
       "careers": "Careers",
       "contact": "Contact",
       "copyright": "© 2024 Mono V2. All rights reserved."
+    },
+    "page": {
+      "title": "Mono V2 - Modern Web Application Platform",
+      "meta_description": "A powerful, modern web application platform built with SvelteKit, featuring real-time collaboration, beautiful UI components, and enterprise-grade security."
     }
   },
   "nav": {

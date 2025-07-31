@@ -36,7 +36,7 @@
       </Button>
 
       <UserButton
-        afterSignOutUrl="/sign-in"
+        afterSignOutUrl="/"
         appearance={{
           elements: {
             avatarBox: 'size-8 rounded-lg',

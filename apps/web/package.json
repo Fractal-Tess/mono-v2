@@ -27,6 +27,7 @@
     "@sveltejs/kit": "catalog:ui",
     "@sveltejs/vite-plugin-svelte": "catalog:ui",
     "@tailwindcss/vite": "catalog:ui",
+    "bits-ui": "^2.9.0",
     "clsx": "^2.1.1",
     "convex": "^1.25.4",
     "convex-svelte": "^0.0.11",

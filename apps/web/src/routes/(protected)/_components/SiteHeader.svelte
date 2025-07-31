@@ -1,4 +1,5 @@
 <script lang="ts">
+  import GithubIcon from '@tabler/icons-svelte/icons/brand-github';
   import { Button } from '@repo/ui/components/ui/button/index.js';
   import { Separator } from '@repo/ui/components/ui/separator/index.js';
   import * as Sidebar from '@repo/ui/components/ui/sidebar/index.js';
@@ -25,6 +26,7 @@
         rel="noopener noreferrer"
       >
         {m['dashboard.github']()}
+        <GithubIcon />
       </Button>
     </div>
   </div>

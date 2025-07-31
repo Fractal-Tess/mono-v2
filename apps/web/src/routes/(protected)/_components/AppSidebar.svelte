@@ -20,7 +20,7 @@
       <Sidebar.MenuItem>
         <Sidebar.MenuButton class="data-[slot=sidebar-menu-button]:!p-1.5">
           {#snippet child({ props })}
-            <a href="##" {...props}>
+            <a href="/dashboard" {...props}>
               <InnerShadowTopIcon class="!size-5" />
               <span class="text-base font-semibold"
                 >{m['dashboard.company_name']()}</span

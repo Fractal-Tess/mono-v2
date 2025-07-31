@@ -23,12 +23,12 @@ export const sidebarData = {
   navMain: [
     {
       title: m['dashboard.nav.dashboard'](),
-      url: '#',
+      url: '/dashboard',
       icon: DashboardIcon
     },
     {
       title: m['dashboard.nav.lifecycle'](),
-      url: '#',
+      url: '/lifecycle',
       icon: ListDetailsIcon
     },
     {

@@ -1,4 +1,4 @@
-@import '@repo/ui/styles/mint.css';
+@import '@repo/ui/styles/neutral.css';
 
 .dev {
   @apply !border-2 !border-red-500;

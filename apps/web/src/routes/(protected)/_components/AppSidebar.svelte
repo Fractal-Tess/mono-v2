@@ -38,11 +38,9 @@
   </Sidebar.Content>
   <Sidebar.Footer>
     <NavUser
-      user={{
-        name: clerk.user?.username ?? '',
-        email: clerk.user?.emailAddresses[0].emailAddress ?? '',
-        avatar: clerk.user?.imageUrl ?? '/images/avatar.png'
-      }}
+      username={clerk.user?.username ?? ''}
+      email={clerk.user?.emailAddresses[0].emailAddress ?? ''}
+      avatar={clerk.user?.imageUrl ?? '/images/avatar.png'}
     />
   </Sidebar.Footer>
 </Sidebar.Root>

@@ -5,7 +5,12 @@
   import { Button } from '@repo/ui/components/ui/button/index.js';
   import * as Sidebar from '@repo/ui/components/ui/sidebar/index.js';
 
-  const clerk = useClerkContext();
+  type Props = {
+    username: string;
+    email: string;
+    avatar: string;
+  };
+  let { email, username, avatar }: Props = $props();
 </script>
 
 <Sidebar.Menu>
@@ -15,11 +20,9 @@
       class="data-[state=open]:bg-sidebar-accent data-[state=open]:text-sidebar-accent-foreground"
     >
       <div class="grid flex-1 text-left text-sm leading-tight">
-        <span class="truncate font-medium"
-          >{clerk.user?.fullName || clerk.user?.firstName || 'User'}</span
-        >
+        <span class="truncate font-medium">{username || 'User'}</span>
         <span class="text-muted-foreground truncate text-xs">
-          {clerk.user?.primaryEmailAddress?.emailAddress || 'No email'}
+          {email || 'No email'}
         </span>
       </div>
       <Button onclick={toggleMode} variant="outline" size="icon">

@@ -1,4 +1,4 @@
-@import '@repo/ui/styles/neutral.css';
+@import '@repo/ui/styles/claude.css';
 
 .dev {
   @apply !border-2 !border-red-500;

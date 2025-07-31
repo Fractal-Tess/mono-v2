@@ -1,11 +1,14 @@
 <script lang="ts">
   import '../app.css';
-  import { setupConvex } from 'convex-svelte';
-  import { PUBLIC_CONVEX_URL } from '$env/static/public';
+  import type { LayoutProps } from './$types';
+  import { ClerkProvider, ConvexProvider } from '$lib/providers';
 
-  setupConvex(PUBLIC_CONVEX_URL);
-
-  let { children } = $props();
+  let { children, data }: LayoutProps = $props();
+  const { initialState } = data;
 </script>
 
-{@render children()}
+<ClerkProvider {initialState}>
+  <ConvexProvider>
+    {@render children()}
+  </ConvexProvider>
+</ClerkProvider>

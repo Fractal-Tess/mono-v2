@@ -15,11 +15,6 @@ import UsersIcon from '@tabler/icons-svelte/icons/users';
 import * as m from '$lib/paraglide/messages.js';
 
 export const sidebarData = {
-  user: {
-    name: 'shadcn',
-    email: 'm@example.com',
-    avatar: '/avatars/shadcn.jpg'
-  },
   navMain: [
     {
       title: m['dashboard.nav.dashboard'](),
@@ -33,17 +28,17 @@ export const sidebarData = {
     },
     {
       title: m['dashboard.nav.analytics'](),
-      url: '#',
+      url: '/analytics',
       icon: ChartBarIcon
     },
     {
       title: m['dashboard.nav.projects'](),
-      url: '#',
+      url: '/projects',
       icon: FolderIcon
     },
     {
       title: m['dashboard.nav.team'](),
-      url: '#',
+      url: '/team',
       icon: UsersIcon
     }
   ],
@@ -52,7 +47,7 @@ export const sidebarData = {
       title: m['dashboard.clouds.capture'](),
       icon: CameraIcon,
       isActive: true,
-      url: '#',
+      url: '/capture',
       items: [
         {
           title: m['dashboard.clouds.active_proposals'](),
@@ -67,30 +62,30 @@ export const sidebarData = {
     {
       title: m['dashboard.clouds.proposal'](),
       icon: FileDescriptionIcon,
-      url: '#',
+      url: '/proposals',
       items: [
         {
           title: m['dashboard.clouds.active_proposals'](),
-          url: '#'
+          url: '/proposals'
         },
         {
           title: m['dashboard.clouds.archived'](),
-          url: '#'
+          url: '/proposals'
         }
       ]
     },
     {
       title: m['dashboard.clouds.prompts'](),
       icon: FileAiIcon,
-      url: '#',
+      url: '/prompts',
       items: [
         {
           title: m['dashboard.clouds.active_proposals'](),
-          url: '#'
+          url: '/prompts'
         },
         {
           title: m['dashboard.clouds.archived'](),
-          url: '#'
+          url: '/prompts'
         }
       ]
     }
@@ -98,34 +93,34 @@ export const sidebarData = {
   navSecondary: [
     {
       title: m['dashboard.nav.settings'](),
-      url: '#',
+      url: '/settings',
       icon: SettingsIcon
     },
     {
       title: m['dashboard.nav.get_help'](),
-      url: '#',
+      url: '/help',
       icon: HelpIcon
     },
     {
       title: m['dashboard.nav.search'](),
-      url: '#',
+      url: '/search',
       icon: SearchIcon
     }
   ],
   documents: [
     {
       name: m['dashboard.documents_items.data_library'](),
-      url: '#',
+      url: '/data-library',
       icon: DatabaseIcon
     },
     {
       name: m['dashboard.documents_items.reports'](),
-      url: '#',
+      url: '/reports',
       icon: ReportIcon
     },
     {
       name: m['dashboard.documents_items.word_assistant'](),
-      url: '#',
+      url: '/word-assistant',
       icon: FileWordIcon
     }
   ]

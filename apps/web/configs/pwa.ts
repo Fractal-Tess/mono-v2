@@ -3,15 +3,13 @@ import type { SvelteKitPWAOptions } from '@vite-pwa/sveltekit';
 export const pwaConfig: SvelteKitPWAOptions = {
   registerType: 'autoUpdate',
   strategies: 'generateSW',
+  injectRegister: 'auto',
   workbox: {
-    globPatterns: ['**/*.{js,css,html,ico,png,svg,webp,webmanifest}'],
-    globIgnores: ['sw.js', 'workbox-*.js', 'dev-sw.js'],
     cleanupOutdatedCaches: true,
     sourcemap: false,
     skipWaiting: true,
     clientsClaim: true
   },
-  injectRegister: 'auto',
   manifest: {
     id: '/',
     lang: 'en',

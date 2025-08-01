@@ -10,6 +10,5 @@ const getRelativePath = (relativePath: string) =>
 export const paraglideConfig: CompilerOptions = {
   project: getRelativePath('../project.inlang'),
   outdir: getRelativePath('../src/lib/paraglide'),
-  cleanOutdir: true,
-  strategy: ['cookie', 'url', 'localStorage', 'preferredLanguage', 'baseLocale']
+  cleanOutdir: true
 };

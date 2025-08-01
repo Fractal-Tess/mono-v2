@@ -1,5 +1,5 @@
 import { PUBLIC_ORIGIN } from '$env/static/public';
-import { pages } from '$lib/configs/sitemap';
+import { pages } from '../../../configs/sitemap';
 
 export function GET() {
   const body = `<?xml version="1.0" encoding="UTF-8" ?>

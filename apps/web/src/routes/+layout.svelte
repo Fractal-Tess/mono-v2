@@ -1,6 +1,8 @@
 <script lang="ts">
   import '../app.css';
   import { ModeWatcher, toggleMode } from 'mode-watcher';
+  import { onMount } from 'svelte';
+  import { pwaInfo } from 'virtual:pwa-info';
   import type { LayoutProps } from './$types';
   import { ClerkProvider, ConvexProvider } from '$lib/providers';
 
@@ -26,7 +28,29 @@
     window.addEventListener('keydown', handler);
     return () => window.removeEventListener('keydown', handler);
   });
+
+  let webManifestLink = $derived(pwaInfo ? pwaInfo.webManifest.linkTag : '');
+
+  onMount(async () => {
+    if (pwaInfo) {
+      const { registerSW } = await import('virtual:pwa-register');
+      registerSW({
+        immediate: true,
+        onRegistered(r) {
+          console.log(`SW Registered: ${r}`);
+        },
+        onRegisterError(error) {
+          console.log('SW registration error', error);
+        }
+      });
+    }
+  });
 </script>
+
+<svelte:head>
+  {@html webManifestLink}
+  <!-- /// -->
+</svelte:head>
 
 <ModeWatcher defaultMode="dark" />
 

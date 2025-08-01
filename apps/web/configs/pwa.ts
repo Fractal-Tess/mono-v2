@@ -1,20 +1,15 @@
-import dotenv from 'dotenv';
-import { z } from 'zod';
 import type { SvelteKitPWAOptions } from '@vite-pwa/sveltekit';
-
-const env = z
-  .object({
-    PUBLIC_ORIGIN: z.url({ error: 'PUBLIC_ORIGIN must be a valid URL' })
-  })
-  .parse(dotenv.config().parsed);
 
 export const pwaConfig: SvelteKitPWAOptions = {
   registerType: 'autoUpdate',
-
+  strategies: 'generateSW',
   workbox: {
     globPatterns: ['**/*.{js,css,html,ico,png,svg,webp,webmanifest}'],
+    globIgnores: ['sw.js', 'workbox-*.js', 'dev-sw.js'],
     cleanupOutdatedCaches: true,
-    sourcemap: true
+    sourcemap: false,
+    skipWaiting: true,
+    clientsClaim: true
   },
   injectRegister: 'auto',
   manifest: {
@@ -28,18 +23,18 @@ export const pwaConfig: SvelteKitPWAOptions = {
     background_color: '#262624',
     display: 'standalone',
     orientation: 'portrait',
-    scope: env.PUBLIC_ORIGIN,
-    start_url: env.PUBLIC_ORIGIN,
+    scope: '/',
+    start_url: '/',
     categories: ['productivity', 'utilities'],
     shortcuts: [
       {
         name: 'Home',
         short_name: 'Home',
         description: 'View your home',
-        url: env.PUBLIC_ORIGIN + '/',
+        url: '/',
         icons: [
           {
-            src: 'icons/manifest-icon-96.png',
+            src: '/icons/manifest-icon-96.png',
             sizes: '96x96',
             type: 'image/png'
           }
@@ -49,10 +44,10 @@ export const pwaConfig: SvelteKitPWAOptions = {
         name: 'Dashboard',
         short_name: 'Dashboard',
         description: 'View your dashboard',
-        url: env.PUBLIC_ORIGIN + '/dashboard',
+        url: '/dashboard',
         icons: [
           {
-            src: 'icons/manifest-icon-192.maskable.png',
+            src: '/icons/manifest-icon-192.maskable.png',
             sizes: '192x192',
             type: 'image/png'
           }
@@ -61,28 +56,28 @@ export const pwaConfig: SvelteKitPWAOptions = {
     ],
     screenshots: [
       {
-        src: 'screenshots/desktop1-pwa.png',
+        src: '/screenshots/desktop1-pwa.png',
         sizes: '1280x720',
         type: 'image/png',
         form_factor: 'wide',
         label: 'Desktop Home Page'
       },
       {
-        src: 'screenshots/desktop2-pwa.png',
+        src: '/screenshots/desktop2-pwa.png',
         sizes: '1280x720',
         type: 'image/png',
         form_factor: 'wide',
         label: 'Desktop Dashboard'
       },
       {
-        src: 'screenshots/mobile1-pwa.png',
+        src: '/screenshots/mobile1-pwa.png',
         sizes: '390x844',
         type: 'image/png',
         form_factor: 'narrow',
         label: 'Mobile Home Page'
       },
       {
-        src: 'screenshots/mobile2-pwa.png',
+        src: '/screenshots/mobile2-pwa.png',
         sizes: '390x844',
         type: 'image/png',
         form_factor: 'narrow',
@@ -92,25 +87,25 @@ export const pwaConfig: SvelteKitPWAOptions = {
 
     icons: [
       {
-        src: 'icons/manifest-icon-192.maskable.png',
+        src: '/icons/manifest-icon-192.maskable.png',
         sizes: '192x192',
         type: 'image/png',
         purpose: 'any'
       },
       {
-        src: 'icons/manifest-icon-192.maskable.png',
+        src: '/icons/manifest-icon-192.maskable.png',
         sizes: '192x192',
         type: 'image/png',
         purpose: 'maskable'
       },
       {
-        src: 'icons/manifest-icon-512.maskable.png',
+        src: '/icons/manifest-icon-512.maskable.png',
         sizes: '512x512',
         type: 'image/png',
         purpose: 'any'
       },
       {
-        src: 'icons/manifest-icon-512.maskable.png',
+        src: '/icons/manifest-icon-512.maskable.png',
         sizes: '512x512',
         type: 'image/png',
         purpose: 'maskable'

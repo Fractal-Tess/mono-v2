@@ -21,7 +21,7 @@ Methodology:
 - Evaluate user requests critically; propose better alternatives or raise concerns if a request is suboptimal or unreasonable.
 - Do not run commands with long runing process, like dev, build, or needing to install a package etc. Ask user to run the command.
 - If moving files, prefer using `mv` over `cp` and `rm` instead of writign the files yourself.
-- Use bun to run commands.
+- Use `bun` to run commands.
 
 Code Style and Structure:
 

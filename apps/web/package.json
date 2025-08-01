@@ -11,7 +11,8 @@
     "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
     "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
     "test:e2e": "playwright test",
-    "test": "npm run test:e2e"
+    "test": "npm run test:e2e",
+    "pwa:generate": "pwa-asset-generator  ./static/logo.png  ./static/icons"
   },
   "dependencies": {
     "@clerk/shared": "^3.16.0",
@@ -27,10 +28,12 @@
     "@sveltejs/kit": "catalog:ui",
     "@sveltejs/vite-plugin-svelte": "catalog:ui",
     "@tailwindcss/vite": "catalog:ui",
+    "@vite-pwa/sveltekit": "^1.0.0",
     "bits-ui": "^2.9.0",
     "clsx": "^2.1.1",
     "convex": "^1.25.4",
     "convex-svelte": "^0.0.11",
+    "dotenv": "^17.2.1",
     "lucide-svelte": "^0.534.0",
     "mdsvex": "catalog:ui",
     "mode-watcher": "^1.1.0",
@@ -38,13 +41,16 @@
     "svelte": "catalog:ui",
     "svelte-check": "catalog:ui",
     "svelte-clerk": "^0.16.2",
+    "svelte-sitemap": "^2.7.1",
     "tailwind-merge": "^3.3.1",
     "tailwindcss": "catalog:ui",
     "typescript": "catalog:ui",
-    "vite": "catalog:ui"
+    "vite": "catalog:ui",
+    "zod": "^4.0.14"
   },
   "devDependencies": {
+    "@inlang/cli": "^3.0.0",
     "@inlang/paraglide-js": "2.0.0",
-    "@inlang/cli": "^3.0.0"
+    "pwa-asset-generator": "^8.0.5"
   }
 }
